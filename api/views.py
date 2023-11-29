@@ -20,6 +20,7 @@ from django.contrib.auth import authenticate,logout,login
 from rest_framework.decorators import action
 # Create your views here.
 
+#all crude operation work on this api view
 class vendorsViewSet(viewsets.ModelViewSet):
     queryset = Vendor.objects.all()
     serializer_class = vendorserializers
@@ -50,7 +51,7 @@ class vendorsViewSet(viewsets.ModelViewSet):
             return Response({'message':'Vendor id not exist.'})
         
 
-        
+#all crude operation work on this api view  
 class PurchaseOrderTrackingViewSet(viewsets.ModelViewSet):
     queryset = PurchaseOrderTracking.objects.all()
     serializer_class = PurchaseOrderTrackingSerializers
