@@ -15,8 +15,7 @@ class PurchaseOrderTrackingSerializers(serializers.ModelSerializer):
         model = PurchaseOrderTracking
         fields = '__all__'
 
-# class LoginSerializer(serializers.HyperlinkedModelSerializer):
-#     email = serializers.EmailField(max_length=255)
-#     class Meta:
-#         model = User
-#         fields = ['id','email','password']
+class HistoricalPerformanceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HistoricalPerformance
+        fields = '__all__'

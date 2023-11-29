@@ -16,13 +16,10 @@ Including another URLconf
 
 from api.views import *
 from django.urls import include, path
-# from django.contrib.auth import views as auth_views
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register('vendors', vendorsViewSet, basename='vendors')
 router.register('purchase_orders', PurchaseOrderTrackingViewSet, basename='purchase_orders')
-#router.register('vendors/<int:id>/performance', vendorsPerformanceViewSet, basename='vendorsPerformanceViewSet')
-router.register('purchase_orders/<int:id>/acknowledge', purchase_orders_acknowledge, basename='purchase_orders_acknowledge')
 
 urlpatterns = router.urls
